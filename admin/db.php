@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'bookvista';
+$user = 'bookvist_admin';
+$pass = '-F9AogmEn!84Y6';
+$db = 'bookvist_bookvista';
 
 $conn = new mysqli($host, $user, $pass, $db);
 
