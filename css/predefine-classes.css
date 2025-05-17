@@ -1,0 +1,82 @@
+.wh-10 { height: 10vh; width: 100%; }
+.wh-15 { height: 15vh; width: 100%; }
+.wh-15-80 { height: 15vh; width: 80%; }
+.wh-20 { height: 20vh; width: 100%; }
+.wh-30 { height: 30vh; width: 100%; }
+.wh-40 { height: 40vh; width: 100%; }
+.wh-50 { height: 50vh; width: 100%; }
+.wh-60 { height: 60vh; width: 100%; }
+.wh-70 { height: 70vh; width: 100%; }
+.wh-80 { height: 80vh; width: 100%; }
+.wh-90 { height: 90vh; width: 100%; }
+.wh-100 { height: 100vh; width: 100%; }
+.wh-110 { height: 110vh; width: 100%; }
+.wh-120 { height: 120vh; width: 100%; }
+.wh-130 { height: 130vh; width: 100%; }
+.wh-140 { height: 140vh; width: 100%; }
+.wh-150 { height: 150vh; width: 100%; }
+.wh-160 { height: 160vh; width: 100%; }
+.wh-170 { height: 170vh; width: 100%; }
+.wh-180 { height: 180vh; width: 100%; }
+.wh-190 { height: 190vh; width: 100%; }
+.wh-200 { height: 200vh; width: 100%; }
+.text-blue { color: #1E3A8A !important; }
+.text-white { color: #fff; }
+.text-black { color: #1F2937 !important; }
+.text-light-grey { color: #EEEEEE; }
+.bg-blue { background-color: #1E3A8A; }
+.bg-white { background-color: #fff; }
+.bg-black { background-color: #1F2937; }
+.bg-light-grey { background-color: #EEEEEE; }
+.background-img { background-position: center; background-repeat: no-repeat; background-size: cover; }
+.background-fix { background-attachment: fixed; }
+
+/* Dosis Fonts */
+.font-dosis-extralight { font-family: dosis-extralight; }
+.font-dosis-regular { font-family: dosis-regular; }
+.font-dosis-bold { font-family: dosis-bold; }
+.font-dosis-light { font-family: dosis-light; }
+.font-dosis-semibold { font-family: dosis-semibold; }
+.font-dosis-extrabold { font-family: dosis-extrabold; }
+.font-dosis-medium { font-family: dosis-medium; }
+
+/* Poppins Fonts */
+.font-poppins-blackitalic { font-family: poppins-blackitalic; }
+.font-poppins-extrabold { font-family: poppins-extrabold; }
+.font-poppins-extrabolditalic { font-family: poppins-extrabolditalic; }
+.font-poppins-extralightitalic { font-family: poppins-extralightitalic; }
+.font-poppins-lightitalic { font-family: poppins-lightitalic; }
+.font-poppins-regular { font-family: poppins-regular; }
+.font-poppins-thin { font-family: poppins-thin; }
+.font-poppins-bold { font-family: poppins-bold; }
+.font-poppins-italic { font-family: poppins-italic; }
+.font-poppins-medium { font-family: poppins-medium; }
+.font-poppins-semibold { font-family: poppins-semibold; }
+.font-poppins-thinitalic { font-family: poppins-thinitalic; }
+.font-poppins-black { font-family: poppins-black; }
+.font-poppins-bolditalic { font-family: poppins-bolditalic; }
+.font-poppins-extralight { font-family: poppins-extralight; }
+.font-poppins-light { font-family: poppins-light; }
+.font-poppins-mediumitalic { font-family: poppins-mediumitalic; }
+.font-poppins-semibolditalic { font-family: poppins-semibolditalic; }
+
+
+.style-btn{
+    padding: 0.5rem 2.5rem !important;
+    border: 2px solid transparent !important;
+    border-radius: 5px ;
+    text-decoration: none !important;
+}
+
+.p-10{padding: 5rem;}
+.pb-10{padding-bottom: 5rem;}
+.py-10{padding-top: 5rem; padding-bottom: 5rem;} 
+.px-10{padding-left: 5rem; padding-right: 5rem;} 
+.m-10{margin: 5rem;}
+.my-10{margin-top: 5rem; margin-bottom: 5rem;} 
+.mx-10{margin-left: 5rem; margin-right: 5rem;} 
+
+.h-100{
+ height: 100% !important;
+ width: auto !important;
+}
