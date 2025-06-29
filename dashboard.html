@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to - Book Vista</title>
+    <!-- link bootstrape css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- link font-awsome css file -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- link coustom css file -->
+    <link rel="stylesheet" href="css/predefine-classes.css">
+    <!-- link favicon  -->
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css"
+        integrity="sha512-riTSV+/RKaiReucjeDW+Id3WlRLVZlTKAJJOHejihLiYHdGaHV7lxWaCfAvUR0ErLYvxTePZpuKZbrTbwpyG9w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
+
+    <style>
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .navbar-light {
+            box-shadow: 0px 4px 4px 0px #0000001A !important;
+
+        }
+
+        .style-wellcome-screen {
+            border-radius: 20px;
+        }
+
+        .content {
+            background: linear-gradient(281.57deg, #6ACEFF 6.39%, #3385C9 90.96%);
+            border-radius: 10px;
+        }
+
+        .style-KPI-icon {
+            height: 50px;
+            width: auto;
+        }
+
+        .style-KPI-entry {
+            font-size: 48px;
+        }
+
+        .style-graphs {
+            box-shadow: 0px 0px 6.6px 0px #00000026;
+            border-radius: 20px;
+        }
+
+        .style-action-btn {
+            padding: 10px;
+            background: none !important;
+            outline: none !important;
+            border: none !important;
+
+        }
+
+        .dt-length lable {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-4">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="images/fulllogo.svg" alt="logo" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse m-auto" id="navbarNav">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item text-capitalize text-black font-poppins-regular mx-3 active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item text-capitalize text-black font-poppins-regular mx-3 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                invoice
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">list</a>
+                                <a class="dropdown-item" href="#">create</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item text-capitalize text-black font-poppins-regular mx-3">
+                            <a class="nav-link" href="#">Reports</a>
+                        </li>
+                        <li class="nav-item text-capitalize text-black font-poppins-regular mx-3">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- welcome -->
+    <section class="mt-6">
+        <div class="container">
+            <div class="p-9 background-image style-wellcome-screen "
+                style="background-image: url(images/welcomeScreen.png);">
+                <h3 class="m-0 text-white font-poppins-medium text-capitalize">hello, abdullah cheema</h3>
+                <h1 class="m-0 text-white font-poppins-bold text-capitalize">welcome..!</h1>
+                <p class="m-0 text-white font-poppins-light text-capitalize pt-2">here is the reports of your bussiness
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- kpi -->
+    <section class="mt-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-12 ">
+                    <div class="content p-4">
+                        <div class="top d-flex flex-row justify-content-between">
+                            <div>
+                                <h5 class="text-white text-capitalize font-poppins-bold m-0">invoices</h5>
+                                <small class="text-white text-capitalize font-poppins-light m-0">Month:
+                                    <span>March</span></small>
+                            </div>
+                            <img src="images/invoice.svg" alt="invocie" class="style-KPI-icon">
+                        </div>
+                        <h1 class="text-white text-capitalize font-poppins-bold m-0 style-KPI-entry mt-3">566</h1>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-12 ">
+                    <div class="content p-4">
+                        <div class="top d-flex flex-row justify-content-between">
+                            <div>
+                                <h5 class="text-white text-capitalize font-poppins-bold m-0">revenue</h5>
+                                <small class="text-white text-capitalize font-poppins-light m-0">Month:
+                                    <span>March</span></small>
+                            </div>
+                            <img src="images/revenue.svg" alt="invocie" class="style-KPI-icon">
+                        </div>
+                        <h1 class="text-white text-capitalize font-poppins-bold m-0 style-KPI-entry mt-3">566,000</h1>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-12 ">
+                    <div class="content p-4">
+                        <div class="top d-flex flex-row justify-content-between">
+                            <div>
+                                <h5 class="text-white text-capitalize font-poppins-bold m-0">unpaid</h5>
+                                <small class="text-white text-capitalize font-poppins-light m-0">Month:
+                                    <span>March</span></small>
+                            </div>
+                            <img src="images/unpaid.svg" alt="invocie" class="style-KPI-icon">
+                        </div>
+                        <h1 class="text-white text-capitalize font-poppins-bold m-0 style-KPI-entry mt-3">50</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- graphs -->
+    <section class="mt-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-md-12 ">
+                    <div class="p-4 style-graphs">
+                        <h4 class="text-dark-grey text-capitalize text-left font-poppins-medium py-4">Overall Revenue
+                            Report - 2024</h4>
+                        <div>
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12  ">
+                    <div class="p-4 style-graphs h-100">
+                        <h4 class="text-dark-grey text-capitalize text-left font-poppins-medium py-4">Overall
+                            paid/unpaid Report - 2024</h4>
+                        <div>
+                            <canvas id="paidUnpaidChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- invocie list -->
+    <section class="mt-6">
+        <div class="container">
+            <div>
+                <div class="table-responsive">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th class="text-capitalize text-black ">Sr no.</th>
+                                <th class="text-capitalize text-black ">INV no.</th>
+                                <th class="text-capitalize text-black ">FBR INV no.</th>
+                                <th class="text-capitalize text-black ">Date</th>
+                                <th class="text-capitalize text-black ">Client name</th>
+                                <th class="text-capitalize text-black ">Amount</th>
+                                <th class="text-capitalize text-black ">sales tax amount</th>
+                                <th class="text-capitalize text-black ">status</th>
+                                <th class="text-capitalize text-black ">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-capitalize font-poppins-light">1</td>
+                                <td class="text-capitalize font-poppins-light">INV-001</td>
+                                <td class="text-capitalize font-poppins-light">573625839465-78</td>
+                                <td class="text-capitalize font-poppins-light">06/06/2025</td>
+                                <td class="text-capitalize font-poppins-light">abdullah cheema</td>
+                                <td class="text-capitalize font-poppins-light">66775</td>
+                                <td class="text-capitalize font-poppins-light">3443</td>
+                                <td class="text-capitalize font-poppins-light"><span
+                                        class="bg-success px-2 py-1 text-white" style="border-radius:5px;">paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="style-action-btn" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/action.svg" alt="action" height="20px" width="auto">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">edit</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">delete</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">print</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">export</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-capitalize font-poppins-light">1</td>
+                                <td class="text-capitalize font-poppins-light">INV-001</td>
+                                <td class="text-capitalize font-poppins-light">573625839465-78</td>
+                                <td class="text-capitalize font-poppins-light">06/06/2025</td>
+                                <td class="text-capitalize font-poppins-light">abdullah cheema</td>
+                                <td class="text-capitalize font-poppins-light">66775</td>
+                                <td class="text-capitalize font-poppins-light">3443</td>
+                                <td class="text-capitalize font-poppins-light"><span
+                                        class="bg-success px-2 py-1 text-white" style="border-radius:5px;">paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="style-action-btn" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/action.svg" alt="action" height="20px" width="auto">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">edit</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">delete</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">print</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">export</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-capitalize font-poppins-light">1</td>
+                                <td class="text-capitalize font-poppins-light">INV-001</td>
+                                <td class="text-capitalize font-poppins-light">573625839465-78</td>
+                                <td class="text-capitalize font-poppins-light">06/06/2025</td>
+                                <td class="text-capitalize font-poppins-light">abdullah cheema</td>
+                                <td class="text-capitalize font-poppins-light">66775</td>
+                                <td class="text-capitalize font-poppins-light">3443</td>
+                                <td class="text-capitalize font-poppins-light"><span
+                                        class="bg-danger px-2 py-1 text-white" style="border-radius:5px;">unpaid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="style-action-btn" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/action.svg" alt="action" height="20px" width="auto">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">edit</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">delete</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">print</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">export</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-capitalize font-poppins-light">1</td>
+                                <td class="text-capitalize font-poppins-light">INV-001</td>
+                                <td class="text-capitalize font-poppins-light">573625839465-78</td>
+                                <td class="text-capitalize font-poppins-light">06/06/2025</td>
+                                <td class="text-capitalize font-poppins-light">abdullah cheema</td>
+                                <td class="text-capitalize font-poppins-light">66775</td>
+                                <td class="text-capitalize font-poppins-light">3443</td>
+                                <td class="text-capitalize font-poppins-light"><span
+                                        class="bg-success px-2 py-1 text-white" style="border-radius:5px;">paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="style-action-btn" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/action.svg" alt="action" height="20px" width="auto">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">edit</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">delete</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">print</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">export</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-capitalize font-poppins-light">1</td>
+                                <td class="text-capitalize font-poppins-light">INV-001</td>
+                                <td class="text-capitalize font-poppins-light">573625839465-78</td>
+                                <td class="text-capitalize font-poppins-light">06/06/2025</td>
+                                <td class="text-capitalize font-poppins-light">abdullah cheema</td>
+                                <td class="text-capitalize font-poppins-light">66775</td>
+                                <td class="text-capitalize font-poppins-light">3443</td>
+                                <td class="text-capitalize font-poppins-light"><span
+                                        class="bg-success px-2 py-1 text-white" style="border-radius:5px;">paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="style-action-btn" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/action.svg" alt="action" height="20px" width="auto">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">edit</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">delete</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">print</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">export</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-capitalize font-poppins-light">1</td>
+                                <td class="text-capitalize font-poppins-light">INV-001</td>
+                                <td class="text-capitalize font-poppins-light">573625839465-78</td>
+                                <td class="text-capitalize font-poppins-light">06/06/2025</td>
+                                <td class="text-capitalize font-poppins-light">abdullah cheema</td>
+                                <td class="text-capitalize font-poppins-light">66775</td>
+                                <td class="text-capitalize font-poppins-light">3443</td>
+                                <td class="text-capitalize font-poppins-light"><span
+                                        class="bg-danger px-2 py-1 text-white" style="border-radius:5px;">unpaid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="style-action-btn" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/action.svg" alt="action" height="20px" width="auto">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">edit</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">delete</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">print</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">export</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-capitalize font-poppins-light">1</td>
+                                <td class="text-capitalize font-poppins-light">INV-001</td>
+                                <td class="text-capitalize font-poppins-light">573625839465-78</td>
+                                <td class="text-capitalize font-poppins-light">06/06/2025</td>
+                                <td class="text-capitalize font-poppins-light">abdullah cheema</td>
+                                <td class="text-capitalize font-poppins-light">66775</td>
+                                <td class="text-capitalize font-poppins-light">3443</td>
+                                <td class="text-capitalize font-poppins-light"><span
+                                        class="bg-success px-2 py-1 text-white" style="border-radius:5px;">paid</span>
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="style-action-btn" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="images/action.svg" alt="action" height="20px" width="auto">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">edit</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">delete</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">print</a>
+                                            <a class="dropdown-item text-capitalize font-poppins-light"
+                                                href="#">export</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="mt-6">
+        <div class="container py-3 border-top">
+            <p class="m-0 text-center text-capitalize text-dark-grey font-poppins-light ">powered by spiraltech</p>
+        </div>
+    </footer>
+    <!-- link jqurey file -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- link bootstrape file -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- link waypoint file -->
+    <script src="js/waypoint.js"></script>
+    <!-- link numberscroller file -->
+    <script src="js/numscroller-1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- link costam jsfile -->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+
+    <script>
+        const ctx = document.getElementById('revenueChart');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+                datasets: [{
+                    backgroundColor: '#1D83C8',
+                    label: '',
+                    data: [523817, 467392, 589104, 412678, 576219, 442301, 598763, 436211, 501032, 481994, 562309, 415827],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        const ctx2 = document.getElementById('paidUnpaidChart');
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: ['Paid', 'Unpaid'],
+                datasets: [{
+                    backgroundColor: [
+                        '#30B7E6', // Green for Paid
+                        '#1D83C8'  // Red for Unpaid
+                    ],
+                    label: '',
+                    data: [600, 20],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Invoice - Book Vista</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/predefine-classes.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <style>
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .navbar-light {
+            box-shadow: 0px 4px 4px 0px #0000001A;
+        }
+
+        label {
+            color: #000;
+            font-family: poppins;
+            font-weight: 400;
+        }
+
+        .style-cross {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-4">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/fulllogo.svg" alt="logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse m-auto" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item mx-3"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Invoice</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">List</a>
+                            <a class="dropdown-item" href="#">Create</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="#">Reports</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="heading mt-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="font-poppins-light m-0">Create Invoice</h1>
+            <a href="#" class="btn bg-dark-blue text-white font-poppins-light">List</a>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div class="container">
+            <form>
+                <h3 class="text-dark-blue mb-3 font-poppins-medium">General Information</h3>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label>INV Number</label>
+                        <input type="text" class="form-control" value="INV-001">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label>Date</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label>INV Type</label>
+                        <select class="form-control">
+                            <option value="">Select</option>
+                            <option value="sales">Sales</option>
+                            <option value="purchase">Purchase</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label>Payment Terms</label>
+                        <select class="form-control">
+                            <option value="">Select</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Card">Card</option>
+                            <option value="Credit">Credit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="client-detaisl mt-5">
+                    <h3 class="text-dark-blue pb-3 m-0 text-capitalize font-poppins-medium">client information</h3>
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3">
+                            <label for="name">Buyer Name</label>
+                            <input type="text" class="form-control" id="buyer name" placeholder="Buyer name" required
+                                name="buyer name">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="CNIC">Buyer CNIC</label>
+                            <input type="text" class="form-control" id="CNIC" placeholder="CNIC" name="CNIC">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="provence">Provence</label>
+                            <select class="form-control" id="provence" name="provence">
+                                <option value="">Select</option>
+                                <option value="AZAD JAMMU AND KASHMIR">AZAD JAMMU AND KASHMIR</option>
+                                <option value="BALOCHISTAN">BALOCHISTAN</option>
+                                <option value="CAPITAL TERRITORY">CAPITAL TERRITORY</option>
+                                <option value="FATA/PATA">FATA/PATA</option>
+                                <option value="GILGIT BALTISTAN">GILGIT BALTISTAN</option>
+                                <option value="KHYBER PAKHTUNKHWA">KHYBER PAKHTUNKHWA</option>
+                                <option value="PUNJAB">PUNJAB</option>
+                                <option value="SINDH">SINDH</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone-number" placeholder="phone Number"
+                                name="phone-number">
+                        </div>
+                        <div class="col-md-8 mb-3">
+                            <label for="address">Buyer Address</label>
+                            <input type="tel" class="form-control" id="address" placeholder="Address" name="address">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="buyer-type">Buyer Type</label>
+                            <select class="form-control" id="buyer-type" name="buyer-type">
+                                <option value="">Select</option>
+                                <option value="Registered">Registered</option>
+                                <option value="Unregistered">Unregistered</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="text-dark-blue mt-5 mb-3 font-poppins-medium">Product</h3>
+                    <button type="button"
+                        class="btn bg-dark-blue text-white font-poppins-light mt-3 add-product-row">Add</button>
+                </div>
+                <div class="product-row-wrapper">
+                    <div class="form-row mt-3 product-row">
+                        <div class="col-md-1 mb-3">
+                            <label for="hs-code">HS Code</label>
+                            <input type="text" class="form-control" id="hs-code" placeholder="hs-code" name="hs-code">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="product-discription">Product Description</label>
+                            <input type="text" class="form-control" id="product-discription"
+                                placeholder="product-discription" name="product-discription">
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="unit-price">Unit Price</label>
+                            <input type="number" class="form-control" id="unit-price" placeholder="unit price"
+                                name="unit-price">
+                        </div>
+                        <div class="col-md-1 mb-3">
+                            <label for="UOM">UOM</label>
+                            <select class="form-control" id="UOM" name="UOM">
+                                <option value="KG">Kilogram</option>
+                                <option value="M">Meter</option>
+                                <option value="PCS">Pieces</option>
+                                <option value="DOZ">Dozen</option>
+                                <option value="LTR">Litre</option>
+                                <option value="MTR">Meter (same as M)</option>
+                                <option value="GMS">Grams</option>
+                                <option value="BOX">Box</option>
+                                <option value="SET">Set</option>
+                                <option value="ROLL">Roll</option>
+                                <option value="BAG">Bag</option>
+                                <option value="TON">Tonne</option>
+                                <option value="PAIR">Pair</option>
+                                <option value="TUB">Tube</option>
+                                <option value="NOS">Numbers / Units</option>
+                                <option value="PKT">Packet</option>
+                                <option value="BTL">Bottle</option>
+                                <option value="FT">Feet</option>
+                                <option value="YDS">Yards</option>
+                                <option value="SQM">Square Meter</option>
+                                <option value="SQF">Square Feet</option>
+                                <option value="HRS">Hours</option>
+                                <option value="DAY">Day</option>
+                                <option value="MIN">Minute</option>
+                                <option value="SERVICE">Service (for services)</option>
+
+                            </select>
+                        </div>
+                        <div class="col-md-1 mb-3">
+                            <label for="tax">Tax%</label>
+                            <input type="number" class="form-control" id="tax" placeholder="tax" name="tax">
+                        </div>
+                        <div class="col-md-1 mb-3">
+                            <label for="qty">QTY</label>
+                            <input type="number" class="form-control" id="qty" placeholder="qty" name="qty">
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="total">Total</label>
+                            <input type="number" class="form-control" id="total" placeholder="total" name="total"
+                                disabled>
+                        </div>
+                        <div class="col-md-1 mb-3 d-flex flex-column justify-content-center align-items-center">
+                            <label for="action">Action</label>
+                            <span class="remove-row" style="cursor:pointer;">
+                                <img src="images/cross.svg" alt="cross" width="10px" height="auto" class="style-cross">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-4 offset-md-8"> <!-- Right-aligned by offset -->
+                    <div class="form-group ">
+                        <label class=" text-right" for="total">Total</label>
+                        <input type="text" class="form-control  bg-light" id="total" readonly>
+                    </div>
+                    <div class="form-group ">
+                        <label class=" text-right" for="tax">Tax</label>
+                        <input type="number" class="form-control " id="tax">
+                    </div>
+                    <div class="form-group ">
+                        <label class=" text-right" for="discount">Discount</label>
+                        <input type="number" class="form-control " id="discount">
+                    </div>
+                    <div class="form-group ">
+                        <label class=" text-right" for="grandTotal">Grand Total</label>
+                        <input type="text" class="form-control  bg-light" id="grandTotal" readonly>
+                    </div>
+                    <div class="form-group  ">
+                        <label class="text-right" for="status">Status</label>
+                        <select class="form-control " id="status">
+                            <option value="Paid">Paid</option>
+                            <option value="Unpaid">Unpaid</option>
+                            <option value="Partially Paid">Partially Paid</option>
+                        </select>
+                    </div>
+
+                  
+                        <!-- Right-aligned inline buttons -->
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-primary mx-1">Submit</button>
+                            <button type="button" class="btn btn-success mx-1">Export</button>
+                            <button type="button" class="btn btn-secondary mx-1">Print</button>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        </form>
+        </div>
+    </section>
+    <footer class="mt-6">
+        <div class="container py-3 border-top">
+            <p class="m-0 text-center text-capitalize text-dark-grey font-poppins-light ">powered by spiraltech</p>
+        </div>
+    </footer>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.add-product-row').click(function () {
+                var $clone = $('.product-row-wrapper .product-row:first').clone();
+                $clone.find('input').val('');
+                $clone.find('select').val('');
+                $('.product-row-wrapper').append($clone);
+            });
+
+            $(document).on('click', '.remove-row', function () {
+                if ($('.product-row').length > 1) {
+                    $(this).closest('.product-row').remove();
+                } else {
+                    alert('At least one product row is required.');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
