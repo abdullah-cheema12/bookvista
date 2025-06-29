@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to - Book Vista</title>
+    <!-- link bootstrape css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- link font-awsome css file -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- link coustom css file -->
+    <link rel="stylesheet" href="css/predefine-classes.css">
+    <!-- link favicon  -->
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css"
+        integrity="sha512-riTSV+/RKaiReucjeDW+Id3WlRLVZlTKAJJOHejihLiYHdGaHV7lxWaCfAvUR0ErLYvxTePZpuKZbrTbwpyG9w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
+    <style>
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .style-data {
+            background-color: #d9d9d9;
+            
+        }
+
+        .wraper p:first-child {
+            width: 120px;
+            /* Fixed width for labels */
+            margin: 0;
+            text-align: right;
+        }
+        .style-data-KPI{
+            border: 1px solid #d9d9d9;
+            
+        }    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header pt-5 d-flex justify-content-center align-items-center flex-column">
+            <img src="images/fulllogo.svg" alt="logo" class="logo pb-4">
+            <!-- company name -->
+            <p class="text-center font-poppins-light m-0 text-capitalize">kashif and sons inc. and co</p>
+            <!-- address -->
+            <p class="text-center font-poppins-light m-0 text-capitalize"><span class="font-poppins-medium">address:
+                </span>51D SIE#1 Modeltown</p>
+            <!-- provence -->
+            <p class="text-center font-poppins-light m-0 text-capitalize"><span class="font-poppins-medium">provence:
+                </span>punjab</p>
+            <!-- phone number -->
+            <p class="text-center font-poppins-light m-0 text-capitalize"><span class="font-poppins-medium">Phone no.:
+                </span>+92 300 1204546</p>
+            <!-- NTN and POS-ID -->
+            <p class="text-center font-poppins-light m-0 text-capitalize"><span class="font-poppins-medium">NTN:
+                </span>5664-78475 | <span class="font-poppins-medium">POS ID: </span>4665</p>
+            <!-- INV number -->
+            <p class="text-center font-poppins-light m-0 text-capitalize"><span class="font-poppins-medium">Invoice
+                    number: </span>INV-001</p>
+
+
+        </div>
+        <hr class="my-5 bg-black">
+        <div class="client-info">
+            <div class="row">
+                <div class="col-xl-6">
+                    <p class="text-left font-poppins-light m-0 text-capitalize"><span class="font-poppins-medium">client
+                            name: </span>Abdullah cheema</p>
+                </div>
+                <div class="col-xl-6">
+                    <p class="text-right font-poppins-light m-0 text-capitalize"><span
+                            class="font-poppins-medium">client address: </span>sui gas office road</p>
+                </div>
+                <div class="col-xl-6">
+                    <p class="text-left font-poppins-light m-0 text-capitalize"><span class="font-poppins-medium">client
+                            CNIC: </span>34101-6457667-8</p>
+                </div>
+                <div class="col-xl-6">
+                    <p class="text-right font-poppins-light m-0 text-capitalize"><span
+                            class="font-poppins-medium">client Provence: </span>punjab</p>
+                </div>
+                <div class="col-xl-6">
+                    <p class="text-left font-poppins-light m-0 text-capitalize"><span class="font-poppins-medium">client
+                            phone: </span>+92 300 120 4546</p>
+                </div>
+                <div class="col-xl-6">
+                    <p class="text-right font-poppins-light m-0 text-capitalize"><span
+                            class="font-poppins-medium">client status: </span>registered</p>
+                </div>
+            </div>
+        </div>
+        <hr class="my-5 bg-black">
+        <div class="product-info">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize text-black font-poppins-medium ">Sr no.</th>
+                        <th class="text-capitalize text-black font-poppins-medium ">HS Code</th>
+                        <th class="text-capitalize text-black font-poppins-medium ">Product Description</th>
+                        <th class="text-capitalize text-black font-poppins-medium ">Unit Price</th>
+                        <th class="text-capitalize text-black font-poppins-medium ">UOM</th>
+                        <th class="text-capitalize text-black font-poppins-medium ">Tax%</th>
+                        <th class="text-capitalize text-black font-poppins-medium ">QTY</th>
+                        <th class="text-capitalize text-black font-poppins-medium ">Total</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td class="text-capitalize text-black font-poppins-light ">1</td>
+                        <td class="text-capitalize text-black font-poppins-light ">1223.554</td>
+                        <td class="text-capitalize text-black font-poppins-light ">plastic chairs</td>
+                        <td class="text-capitalize text-black font-poppins-light ">30,000</td>
+                        <td class="text-capitalize text-black font-poppins-light ">Counting</td>
+                        <td class="text-capitalize text-black font-poppins-light ">18%</td>
+                        <td class="text-capitalize text-black font-poppins-light ">400</td>
+                        <td class="text-capitalize text-black font-poppins-light ">455667</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-capitalize text-black font-poppins-light ">1</td>
+                        <td class="text-capitalize text-black font-poppins-light ">1223.554</td>
+                        <td class="text-capitalize text-black font-poppins-light ">plastic chairs</td>
+                        <td class="text-capitalize text-black font-poppins-light ">30,000</td>
+                        <td class="text-capitalize text-black font-poppins-light ">Counting</td>
+                        <td class="text-capitalize text-black font-poppins-light ">18%</td>
+                        <td class="text-capitalize text-black font-poppins-light ">400</td>
+                        <td class="text-capitalize text-black font-poppins-light ">455667</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-capitalize text-black font-poppins-light ">1</td>
+                        <td class="text-capitalize text-black font-poppins-light ">1223.554</td>
+                        <td class="text-capitalize text-black font-poppins-light ">plastic chairs</td>
+                        <td class="text-capitalize text-black font-poppins-light ">30,000</td>
+                        <td class="text-capitalize text-black font-poppins-light ">Counting</td>
+                        <td class="text-capitalize text-black font-poppins-light ">18%</td>
+                        <td class="text-capitalize text-black font-poppins-light ">400</td>
+                        <td class="text-capitalize text-black font-poppins-light ">455667</td>
+
+                    </tr>
+                    <tr>
+                        <td class="text-capitalize text-black font-poppins-light ">1</td>
+                        <td class="text-capitalize text-black font-poppins-light ">1223.554</td>
+                        <td class="text-capitalize text-black font-poppins-light ">plastic chairs</td>
+                        <td class="text-capitalize text-black font-poppins-light ">30,000</td>
+                        <td class="text-capitalize text-black font-poppins-light ">Counting</td>
+                        <td class="text-capitalize text-black font-poppins-light ">18%</td>
+                        <td class="text-capitalize text-black font-poppins-light ">400</td>
+                        <td class="text-capitalize text-black font-poppins-light ">455667</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="summary mt-6">
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 offset-xl-8 offset-8">
+                    <div class="wraper d-flex flex-row align-items-center justify-content-center">
+                        <p class=" text-right font-poppins-medium text-dark-blue text-capitalize">total</p>
+                        <p class="ml-4 style-data-KPI px-3 py-3 w-100 font-poppins-medium text-capitalize">600,000</p>
+                    </div>
+                    <div class="wraper d-flex flex-row align-items-center justify-content-center">
+                        <p class=" text-right font-poppins-medium text-dark-blue text-capitalize">Tax%</p>
+                        <p class="ml-4 style-data-KPI px-3 py-3 w-100 font-poppins-medium text-capitalize">30</p>
+                    </div>
+                    <div class="wraper d-flex flex-row align-items-center justify-content-center">
+                        <p class=" text-right font-poppins-medium text-dark-blue text-capitalize">Discount</p>
+                        <p class="ml-4 style-data-KPI px-3 py-3 w-100 font-poppins-medium text-capitalize">400</p>
+                    </div>
+                    <div class="wraper d-flex flex-row align-items-center justify-content-center">
+                        <p class=" text-right font-poppins-medium text-dark-blue text-capitalize">grand total</p>
+                        <p class="ml-4 style-data px-3 py-3 w-100 font-poppins-medium text-capitalize">600,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <footer class="mt-10">
+        <div class="container py-3 border-top">
+            <p class="m-0 text-center text-capitalize text-dark-grey font-poppins-light ">powered by spiraltech</p>
+        </div>
+    </footer>
+    </div>
+    <!-- link jqurey file -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- link bootstrape file -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- link waypoint file -->
+    <script src="js/waypoint.js"></script>
+    <!-- link numberscroller file -->
+    <script src="js/numscroller-1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- link costam jsfile -->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+
+
+
+
+</body>
+
+</html>
