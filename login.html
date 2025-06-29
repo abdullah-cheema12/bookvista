@@ -1,23 +1,35 @@
+<!-- Declare HTML document and set language -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Basic meta tags for character encoding, compatibility, and responsiveness -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the login page -->
     <title>Welcome to - Book Vista</title>
-    <!-- link bootstrape css -->
+
+    <!-- Bootstrap CSS for layout and components -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- link font-awsome css file -->
+
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="css/all.css">
-    <!-- link coustom css file -->
+
+    <!-- Custom pre-defined utility classes -->
     <link rel="stylesheet" href="css/predefine-classes.css">
-    <!-- link favicon  -->
+
+    <!-- Favicon icon for browser tab -->
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+
+    <!-- Owl Carousel styles (if needed on this page) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css"
         integrity="sha512-riTSV+/RKaiReucjeDW+Id3WlRLVZlTKAJJOHejihLiYHdGaHV7lxWaCfAvUR0ErLYvxTePZpuKZbrTbwpyG9w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom internal styles -->
     <style>
         .logo {
             width: 150px;
@@ -28,66 +40,99 @@
             border-radius: 20px;
             box-shadow: 8px 10px 14px 0px #0000001A;
         }
-     
     </style>
 </head>
 
 <body>
 
+    <!-- Full-width container for 2-column login layout -->
     <div class="container-fluid">
-        <div class="row ">
-            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 bg-danger wh-100 background-image "
+        <div class="row">
+
+            <!-- Left side: Branding & welcome text -->
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 bg-danger wh-100 background-image"
                 style="background-image: url(images/credientialScreen.png); position:relative;">
-                <div class="container ">
+                <div class="container">
+
+                    <!-- Spiraltech logo (white) -->
                     <div class="logo-wrapper py-4 px-6">
                         <img src="images/FulllogoWhite.svg" alt="logo" class="logo">
                     </div>
+
+                    <!-- Welcome text section -->
                     <div class="py-10 px-6">
-                        <h1 class="m-0 text-white text-left font-poppins-medium text-capitalize">hello,</h1>
-                        <h1 class="m-0 text-white text-left font-poppins-bold text-capitalize">welcome!</h1>
-                        <p class="m-0 text-white text-left font-poppins-light text-capitalize pt-4">Create and manage
-                            digital invoices fully integrated with FBR — fast, secure, and compliant.</p>
+                        <h1 class="text-white font-poppins-medium">hello,</h1>
+                        <h1 class="text-white font-poppins-bold">welcome!</h1>
+                        <p class="text-white font-poppins-light pt-4">
+                            Create and manage digital invoices fully integrated with FBR — fast, secure, and compliant.
+                        </p>
                     </div>
-                    <div class="" style="position:absolute; bottom:0px;">
-                        <p class="text-left px-7 py-4 text-capitalize text-white font-poppins-light m-0">powered by
-                            spiraltech</p>
+
+                    <!-- Footer branding on left panel -->
+                    <div style="position:absolute; bottom:0px;">
+                        <p class="px-7 py-4 text-white font-poppins-light m-0">powered by spiraltech</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 ">
-                <div class="d-flex justify-content-center align-items-center py-5 h-100 px-7 ">
+
+            <!-- Right side: Login form -->
+            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                <div class="d-flex justify-content-center align-items-center py-5 h-100 px-7">
+                    
+                    <!-- Login form card -->
                     <form class="p-6 style-form">
+                        <!-- Email input -->
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" placeholder="Enter email">
-                           
                         </div>
+
+                        <!-- Password input -->
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1"
                                 placeholder="Password">
                         </div>
-                       
-                        <button type="submit" class="btn bg-dark-blue text-white font-poppins-light text-capitalize" style="width: fit-content;">login</button>
-                        <p class="m-0 text-left text-capitalize pt-4 font-poppins-light">Don’t have account...? <a href="signup.html" class="text-decoration-none text-dark-blue">Signup</a></p>
+
+                        <!-- Login button -->
+                        <button type="submit"
+                            class="btn bg-dark-blue text-white font-poppins-light text-capitalize"
+                            style="width: fit-content;">login</button>
+
+                        <!-- Signup redirect -->
+                        <p class="text-left text-capitalize pt-4 font-poppins-light">
+                            Don’t have an account...? 
+                            <a href="signup.html" class="text-decoration-none text-dark-blue">Signup</a>
+                        </p>
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
-    <!-- link jqurey file -->
+
+    <!-- ========== SCRIPTS ========== -->
+
+    <!-- jQuery -->
     <script src="js/jquery-3.5.1.min.js"></script>
-    <!-- link bootstrape file -->
+
+    <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- link waypoint file -->
+
+    <!-- Optional animations or scroll-based JS -->
     <script src="js/waypoint.js"></script>
-    <!-- link numberscroller file -->
     <script src="js/numscroller-1.0.js"></script>
+
+    <!-- Owl Carousel script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!-- link costam jsfile -->
+
+    <!-- Custom JS file -->
     <script src="js/script.js"></script>
+
+    <!-- Reserved space for page-specific JS logic -->
     <script>
+        // You can add login validation logic here (if needed)
     </script>
 
 </body>
