@@ -1,45 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>invocie - template</title>
+    <title>Invoice :: {{ config('app.name') }}</title>
+    <link rel="shortcut icon" href="{{ asset('media/svg/favicon.svg') }}" type="image/x-icon">
     <style>
-        .container{
-            margin-left: 5rem;
-            margin-right: 5rem;
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 1140px;
+            /* Adjust as needed */
         }
-        /* font and color */
-        /* backgrounds */
-        .bg-light-blue{background-color: #30B7E6;}
-        .bg-dark-blue{background-color: #1D83C8;}
-        .bg-white{background-color: #fff;}
-        .bg-black{background-color: #2B2B2B;}
-        .bg-light-grey{background-color: #CCCCCC;}
-        .bg-drak-grey{background-color: #F3F3F3;}
-        /* text */
-        .text-light-blue{color: #30B7E6;}
-        .text-dark-blue{color: #1D83C8;}
-        .text-white{color: #fff;}
-        .text-black{color: #2B2B2B;}
-        .text-light-grey{color: #CCCCCC;}
-        .text-drak-grey{color: #F3F3F3;}
-        /* fonts */
-        .font-poppins-thin {font-family: 'Poppins', sans-serif; font-weight: 100;}
-        .font-poppins-extralight {font-family: 'Poppins', sans-serif; font-weight: 200;}
-        .font-poppins-light {font-family: 'Poppins', sans-serif; font-weight: 300;}
-        .font-poppins-regular {font-family: 'Poppins', sans-serif; font-weight: 400;}
-        .font-poppins-medium {font-family: 'Poppins', sans-serif; font-weight: 500;}
-        .font-poppins-semibold {font-family: 'Poppins', sans-serif; font-weight: 600;}
-        .font-poppins-bold {font-family: 'Poppins', sans-serif; font-weight: 700;}
-        .font-poppins-extrabold {font-family: 'Poppins', sans-serif; font-weight: 800;}
-        .font-poppins-black {font-family: 'Poppins', sans-serif;  font-weight: 900;}
-        
+
+        .py-5 {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+
+        .pt-5 {
+            padding-top: 3rem !important;
+        }
+
+        .pb-4 {
+            padding-bottom: 1.5rem !important;
+        }
+
+        .py-3 {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+
+        .my-5 {
+            margin-top: 3rem !important;
+            margin-bottom: 3rem !important;
+        }
+
+        .mt-6 {
+            margin-top: 4rem !important;
+            /* Bootstrap doesn't have mt-6 by default */
+        }
+
+        .m-0 {
+            margin: 0 !important;
+        }
+
+        .ml-4 {
+            margin-left: 1.5rem !important;
+        }
+
+        .offset-8 {
+            margin-left: 66.666667% !important;
+            /* 8/12 columns */
+        }
+
+        .offset-xl-8 {
+            margin-left: 66.666667% !important;
+            /* Same for xl breakpoint */
+        }
+
+        .d-flex {
+            display: flex !important;
+        }
+
+        .flex-column {
+            flex-direction: column !important;
+        }
+
+        .flex-row {
+            flex-direction: row !important;
+        }
+
+        .justify-content-center {
+            justify-content: center !important;
+        }
+
+        .align-items-center {
+            align-items: center !important;
+        }
+
+        .text-left {
+            text-align: left !important;
+        }
+
+        .text-right {
+            text-align: right !important;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .text-capitalize {
+            text-transform: capitalize !important;
+        }
+
+        .text-black {
+            color: #000000 !important;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .border-top {
+            border-top: 1px solid #dee2e6 !important;
+        }
+
+        /* Font Weights */
+        .font-poppins-light {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+        }
+
+        .font-poppins-medium {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Text Colors */
+        .text-dark-blue {
+            color: #1a237e;
+        }
+
+        .text-dark-grey {
+            color: #555555;
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Backgrounds & Borders */
+        .style-data {
+            background-color: #d9d9d9;
+        }
+
+        .style-data-KPI {
+            border: 1px solid #d9d9d9;
+        }
+
+        /* Custom Spacing Utility */
+        .mt-10 {
+            margin-top: 6rem !important;
+        }
+
+        /* Label Alignment in Summary */
+        .wraper p:first-child {
+            width: 120px;
+            margin: 0;
+            text-align: right;
+        }
+
+        .px-3 {
+            padding-left: 1rem !important;
+            /* 16px */
+            padding-right: 1rem !important;
+            /* 16px */
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .col-sm-4,
+        .col-md-4,
+        .col-lg-4,
+        .col-xl-4 {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+        }
+
+        .col-xl-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .bg-black {
+            background-color: #000 !important;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                zoom: 90%;
+                /* Shrink content slightly to fit on one page */
+                margin: 0;
+                padding: 0;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            hr,
+            .border-top {
+                border-color: #000 !important;
+                /* Make sure border is visible */
+            }
+
+            table {
+                page-break-inside: avoid !important;
+            }
+
+            .summary,
+            .product-info,
+            .client-info,
+            .header,
+            footer {
+                page-break-inside: avoid;
+                page-break-before: auto;
+                page-break-after: auto;
+            }
+
+            /* Optional: force everything to stick to one page */
+            @page {
+                size: A4 portrait;
+                margin: 1cm;
+            }
+
+            /* Hide scrollbars */
+            ::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @media print {
+
+            .mt-6,
+            .mt-10,
+            .my-5 {
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+        }
+
+        @media print {
+
+            body,
+            html {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            .print-wrapper {
+                transform: scale(0.95);
+                /* Adjust until it fits on one page */
+                transform-origin: top left;
+                width: 100%;
+                height: 100%;
+            }
+
+            @page {
+                size: A4 portrait;
+                margin: 1cm;
+                /* You can make this 0.5cm to fit tighter */
+            }
+
+            /* Remove large vertical spacing when printing */
+            .mt-6,
+            .mt-10,
+            .my-5,
+            .py-3 {
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+
+            /* Make sure tables and sections don't break apart */
+            .header,
+            .client-info,
+            .product-info,
+            .summary,
+            footer {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="m-0 text-capitalize text-center ">hello</h1>
+    <div class="print-wrapper">
+        <div class="container">
+            <!-- Header -->
+            <div class="header pt-5 d-flex justify-content-center align-items-center flex-column">
+                @if (file_exists(public_path('storage/' . $company->company_logo)) && !empty($company->company_logo))
+                <img src="{{ public_path('storage/' . $company->company_logo) }}" class="logo pb-4" alt="Company Logo">
+                @else
+                <img src="{{ public_path('images/default-logo.png') }}" class="logo pb-4" alt="Default Logo">
+                @endif
+
+                <p class="text-center font-poppins-light m-0 text-capitalize">{{ $company->company_name ?? 'Company
+                    Name' }}</p>
+                <p class="text-center font-poppins-light m-0 text-capitalize">
+                    <span class="font-poppins-medium">address:</span> {{ $company->address ?? 'N/A' }}
+                </p>
+                <p class="text-center font-poppins-light m-0 text-capitalize">
+                    <span class="font-poppins-medium">provence:</span> {{ $invoice->provence }}
+                </p>
+                <p class="text-center font-poppins-light m-0 text-capitalize">
+                    <span class="font-poppins-medium">Phone no.:</span> {{ $company->phone_number ?? 'N/A' }}
+                </p>
+                <p class="text-center font-poppins-light m-0 text-capitalize">
+                    <span class="font-poppins-medium">NTN:</span> {{ $company->ntn ?? 'N/A' }} |
+                    <span class="font-poppins-medium">POS ID:</span> {{ $company->id }}
+                </p>
+                <p class="text-center font-poppins-light m-0 text-capitalize">
+                    <span class="font-poppins-medium">Invoice number:</span> {{ $invoice->inv_number }}
+                </p>
+            </div>
+
+            <!-- Client Info -->
+            <div class="client-info py-5">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <p class="text-left font-poppins-light m-0 text-capitalize">
+                            <span class="font-poppins-medium">client name:</span> {{ $invoice->buyer_name }}
+                        </p>
+                    </div>
+                    <div class="col-xl-6">
+                        <p class="text-right font-poppins-light m-0 text-capitalize">
+                            <span class="font-poppins-medium">client address:</span> {{ $invoice->address }}
+                        </p>
+                    </div>
+                    <div class="col-xl-6">
+                        <p class="text-left font-poppins-light m-0 text-capitalize">
+                            <span class="font-poppins-medium">client CNIC:</span> {{ $invoice->buyer_cnic }}
+                        </p>
+                    </div>
+                    <div class="col-xl-6">
+                        <p class="text-right font-poppins-light m-0 text-capitalize">
+                            <span class="font-poppins-medium">client Provence:</span> {{ $invoice->provence }}
+                        </p>
+                    </div>
+                    <div class="col-xl-6">
+                        <p class="text-left font-poppins-light m-0 text-capitalize">
+                            <span class="font-poppins-medium">client phone:</span> {{ $invoice->phone_number }}
+                        </p>
+                    </div>
+                    <div class="col-xl-6">
+                        <p class="text-right font-poppins-light m-0 text-capitalize">
+                            <span class="font-poppins-medium">client status:</span> {{ strtolower($invoice->buyer_type)
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Table -->
+            <div class="product-info">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize text-black font-poppins-medium">Sr no.</th>
+                            <th class="text-capitalize text-black font-poppins-medium">HS Code</th>
+                            <th class="text-capitalize text-black font-poppins-medium">Product Description</th>
+                            <th class="text-capitalize text-black font-poppins-medium">Unit Price</th>
+                            <th class="text-capitalize text-black font-poppins-medium">UOM</th>
+                            <th class="text-capitalize text-black font-poppins-medium">Tax%</th>
+                            <th class="text-capitalize text-black font-poppins-medium">QTY</th>
+                            <th class="text-capitalize text-black font-poppins-medium">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($invoice->items as $item)
+                        <tr>
+                            <td class="text-capitalize text-black font-poppins-light">{{ $loop->iteration }}</td>
+                            <td class="text-capitalize text-black font-poppins-light">{{ $item->hs_code }}</td>
+                            <td class="text-capitalize text-black font-poppins-light">{{ $item->product_description }}
+                            </td>
+                            <td class="text-capitalize text-black font-poppins-light">{{
+                                number_format($item->unit_price, 2) }}</td>
+                            <td class="text-capitalize text-black font-poppins-light">{{ $item->uom }}</td>
+                            <td class="text-capitalize text-black font-poppins-light">{{ number_format($item->tax, 2) }}
+                            </td>
+                            <td class="text-capitalize text-black font-poppins-light">{{ $item->qty }}</td>
+                            <td class="text-capitalize text-black font-poppins-light">{{ number_format($item->total, 2)
+                                }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Summary -->
+            <div class="summary mt-6">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 offset-xl-8 offset-8">
+                        <div class="wraper d-flex flex-row align-items-center justify-content-center">
+                            <p class="text-right font-poppins-medium text-dark-blue text-capitalize">total</p>
+                            <p class="ml-4 style-data-KPI px-3 py-3 w-100 font-poppins-medium text-capitalize">
+                                {{ number_format($invoice->total, 2) }}
+                            </p>
+                        </div>
+                        <div class="wraper d-flex flex-row align-items-center justify-content-center">
+                            <p class="text-right font-poppins-medium text-dark-blue text-capitalize">Tax%</p>
+                            <p class="ml-4 style-data-KPI px-3 py-3 w-100 font-poppins-medium text-capitalize">
+                                {{ number_format($invoice->tax, 2) }}
+                            </p>
+                        </div>
+                        <div class="wraper d-flex flex-row align-items-center justify-content-center">
+                            <p class="text-right font-poppins-medium text-dark-blue text-capitalize">Discount</p>
+                            <p class="ml-4 style-data-KPI px-3 py-3 w-100 font-poppins-medium text-capitalize">
+                                {{ number_format($invoice->discount, 2) }}
+                            </p>
+                        </div>
+                        <div class="wraper d-flex flex-row align-items-center justify-content-center">
+                            <p class="text-right font-poppins-medium text-dark-blue text-capitalize">grand total</p>
+                            <p class="ml-4 style-data px-3 py-3 w-100 font-poppins-medium text-capitalize">
+                                {{ number_format($invoice->grand_total, 2) }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="mt-10">
+                <div class="container py-3 border-top">
+                    <p class="m-0 text-center text-capitalize text-dark-grey font-poppins-light">powered by spiraltech
+                    </p>
+                </div>
+            </footer>
+        </div>
     </div>
 </body>
+
 </html>
